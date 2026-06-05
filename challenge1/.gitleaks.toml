@@ -1,0 +1,13 @@
+title = "Custom Gitleaks Rules"
+
+[[rules]]
+id = "hardcoded-password"
+description = "Detect hardcoded passwords"
+regex = '''(?i)(password|passwd|pwd)\s*=\s*["'][^"']+["']'''
+tags = ["password", "credentials"]
+
+[[rules]]
+id = "aws-access-key"
+description = "Detect AWS Access Keys"
+regex = '''AKIA[0-9A-Z]{16}'''
+tags = ["aws", "cloud"]
