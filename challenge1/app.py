@@ -1,10 +1,13 @@
-DB_URL ="postgresql://admin:SuperSecret99@localhost/prod"
-DB_PASSWORD = "vs1023&vineet2005"
+from dotenv import load_dotenv
+import os
 
-AWS_ACCESS_KEY = "AKIA1234567890ABCDEF""
+load_dotenv()
+
+DB_PASSWORD = os.getenv("DB_PASSWORD")
+AWS_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY")
 
 def connect():
-    print("Connecting to database...")
-    print("Connecting to AWS...")
+    print("Connecting securely...")
+    print("Secrets loaded from environment variables")
 
 connect()

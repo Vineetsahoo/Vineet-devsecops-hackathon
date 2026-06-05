@@ -1,0 +1,140 @@
+[
+ {
+  "Description": "Detect hardcoded passwords",
+  "StartLine": 2,
+  "EndLine": 2,
+  "StartColumn": 5,
+  "EndColumn": 34,
+  "Match": "PASSWORD = \"vs1023\u0026vineet2005\"",
+  "Secret": "PASSWORD = \"vs1023\u0026vineet2005\"",
+  "File": "challenge1/app.py",
+  "SymlinkFile": "",
+  "Commit": "cf8335c80a61ab2bf231aa7fd18b3a242c015738",
+  "Entropy": 4.3483944,
+  "Author": "Vineetsahoo",
+  "Email": "vineetsahoo3@gmail.com",
+  "Date": "2026-06-05T06:48:56Z",
+  "Message": "feat: add custom Gitleaks rules and detect secrets",
+  "Tags": [
+   "password",
+   "credentials"
+  ],
+  "RuleID": "hardcoded-password",
+  "Fingerprint": "cf8335c80a61ab2bf231aa7fd18b3a242c015738:challenge1/app.py:hardcoded-password:2"
+ },
+ {
+  "Description": "Detect AWS Access Keys",
+  "StartLine": 4,
+  "EndLine": 4,
+  "StartColumn": 19,
+  "EndColumn": 38,
+  "Match": "AKIA1234567890ABCDEF",
+  "Secret": "AKIA1234567890ABCDEF",
+  "File": "challenge1/app.py",
+  "SymlinkFile": "",
+  "Commit": "cf8335c80a61ab2bf231aa7fd18b3a242c015738",
+  "Entropy": 4.0841837,
+  "Author": "Vineetsahoo",
+  "Email": "vineetsahoo3@gmail.com",
+  "Date": "2026-06-05T06:48:56Z",
+  "Message": "feat: add custom Gitleaks rules and detect secrets",
+  "Tags": [
+   "aws",
+   "cloud"
+  ],
+  "RuleID": "aws-access-key",
+  "Fingerprint": "cf8335c80a61ab2bf231aa7fd18b3a242c015738:challenge1/app.py:aws-access-key:4"
+ },
+ {
+  "Description": "Detect hardcoded passwords",
+  "StartLine": 1,
+  "EndLine": 1,
+  "StartColumn": 4,
+  "EndColumn": 22,
+  "Match": "PASSWORD = \"vs1023\"",
+  "Secret": "PASSWORD = \"vs1023\"",
+  "File": "challenge1/app.py",
+  "SymlinkFile": "",
+  "Commit": "74bc3604ff9f2a642d4b2791644ea7a67ef3ba27",
+  "Entropy": 3.932138,
+  "Author": "Vineet Sahoo",
+  "Email": "vineetsahoo3@gmail.com",
+  "Date": "2026-06-05T06:37:07Z",
+  "Message": "Initial commit",
+  "Tags": [
+   "password",
+   "credentials"
+  ],
+  "RuleID": "hardcoded-password",
+  "Fingerprint": "74bc3604ff9f2a642d4b2791644ea7a67ef3ba27:challenge1/app.py:hardcoded-password:1"
+ },
+ {
+  "Description": "Detect AWS Access Keys",
+  "StartLine": 3,
+  "EndLine": 3,
+  "StartColumn": 20,
+  "EndColumn": 39,
+  "Match": "AKIAIOSFODNN7EXAMPLE",
+  "Secret": "AKIAIOSFODNN7EXAMPLE",
+  "File": "challenge1/app.py",
+  "SymlinkFile": "",
+  "Commit": "74bc3604ff9f2a642d4b2791644ea7a67ef3ba27",
+  "Entropy": 3.6841838,
+  "Author": "Vineet Sahoo",
+  "Email": "vineetsahoo3@gmail.com",
+  "Date": "2026-06-05T06:37:07Z",
+  "Message": "Initial commit",
+  "Tags": [
+   "aws",
+   "cloud"
+  ],
+  "RuleID": "aws-access-key",
+  "Fingerprint": "74bc3604ff9f2a642d4b2791644ea7a67ef3ba27:challenge1/app.py:aws-access-key:3"
+ },
+ {
+  "Description": "Detect AWS Access Keys",
+  "StartLine": 8,
+  "EndLine": 8,
+  "StartColumn": 14,
+  "EndColumn": 33,
+  "Match": "AKIAIOSFODNN7EXAMPLE",
+  "Secret": "AKIAIOSFODNN7EXAMPLE",
+  "File": "challenge1/gitleaks-before.json",
+  "SymlinkFile": "",
+  "Commit": "cf8335c80a61ab2bf231aa7fd18b3a242c015738",
+  "Entropy": 3.6841838,
+  "Author": "Vineetsahoo",
+  "Email": "vineetsahoo3@gmail.com",
+  "Date": "2026-06-05T06:48:56Z",
+  "Message": "feat: add custom Gitleaks rules and detect secrets",
+  "Tags": [
+   "aws",
+   "cloud"
+  ],
+  "RuleID": "aws-access-key",
+  "Fingerprint": "cf8335c80a61ab2bf231aa7fd18b3a242c015738:challenge1/gitleaks-before.json:aws-access-key:8"
+ },
+ {
+  "Description": "Detect AWS Access Keys",
+  "StartLine": 9,
+  "EndLine": 9,
+  "StartColumn": 15,
+  "EndColumn": 34,
+  "Match": "AKIAIOSFODNN7EXAMPLE",
+  "Secret": "AKIAIOSFODNN7EXAMPLE",
+  "File": "challenge1/gitleaks-before.json",
+  "SymlinkFile": "",
+  "Commit": "cf8335c80a61ab2bf231aa7fd18b3a242c015738",
+  "Entropy": 3.6841838,
+  "Author": "Vineetsahoo",
+  "Email": "vineetsahoo3@gmail.com",
+  "Date": "2026-06-05T06:48:56Z",
+  "Message": "feat: add custom Gitleaks rules and detect secrets",
+  "Tags": [
+   "aws",
+   "cloud"
+  ],
+  "RuleID": "aws-access-key",
+  "Fingerprint": "cf8335c80a61ab2bf231aa7fd18b3a242c015738:challenge1/gitleaks-before.json:aws-access-key:9"
+ }
+]
