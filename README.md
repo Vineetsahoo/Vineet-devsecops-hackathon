@@ -1,35 +1,91 @@
 # DevSecOps Hackathon
 
-This repository contains solutions for a multi-stage DevSecOps security challenge focused on secure development, vulnerability scanning, container hardening, and Infrastructure as Code (IaC) security practices.
+Concise solutions for a four-part DevSecOps security challenge covering secret detection, application scanning, container hardening, and Infrastructure-as-Code (IaC) security.
 
-The project demonstrates:
-* **Secret detection and remediation** using Gitleaks
-* **Vulnerable Flask application scanning** using Semgrep
-* **Docker image hardening** using Trivy
-* **Terraform security analysis** using Checkov
+## Overview
 
----
+- Challenge 1: Secret detection and remediation (Gitleaks)
+- Challenge 2: Vulnerable Flask app scanning and fixes (Semgrep)
+- Challenge 3: Dockerfile hardening and image scanning (Trivy)
+- Challenge 4: Terraform security checks and remediation (Checkov)
 
-## Project Structure
+## Repository layout
 
-```text
+```
 vineet-devsecops-hackathon/
 ├── challenge1/
+│   ├── app.py
+│   ├── gitleaks-before.json
+│   └── gitleaks-after.json
 ├── challenge2/
+│   ├── app.py
+│   ├── app_vulnerable.py
+│   ├── semgrep-before.json
+│   └── semgrep-after.json
 ├── challenge3/
+│   ├── app.py
+│   ├── Dockerfile          # hardened
+│   ├── Dockerfile.insecure
+│   └── requirements.txt
 ├── challenge4/
+│   ├── main.tf
+│   ├── main_insecure.tf
+│   ├── checkov-before.txt
+│   └── checkov-after.txt
 └── REPORT.md
+```
 
-## Challenges
-### Challenge 1 -  Secrets & Git
-Simulated accidental credential exposure, detected secrets using Gitleaks, and migrated sensitive data to environment variables.
+## Prerequisites
 
-### Challenge 2 — Vulnerable Flask Application
-Created intentionally vulnerable Flask code, scanned vulnerabilities using Semgrep, and remediated insecure patterns.
+- Python 3.8+ (for running the sample Flask apps)
+- Optional scanners (installed separately): `gitleaks`, `semgrep`, `trivy`, `checkov`
 
-### Challenge 3 — Docker Hardening
-Built insecure and hardened Dockerfiles, scanned them using Trivy, and reduced security findings.
+Install Python dependencies for challenges that require them:
 
-### Challenge 4 — Infrastructure as Code Security
- Created insecure Terraform configurations, scanned them using Checkov, and fixed all security issues.
+```powershell
+python -m pip install -r challenge3/requirements.txt
+```
+
+## Check it out
+
+Each challenge folder contains the vulnerable and remediated artifacts and the scanner output files. Quick guidance:
+
+- Challenge 1 (Secrets & Git)
+	- Review detected secrets: `challenge1/gitleaks-before.json`
+	- Remediated output: `challenge1/gitleaks-after.json`
+
+- Challenge 2 (Flask app + Semgrep)
+	- Run the vulnerable app: `python challenge2/app_vulnerable.py`
+	- Run the fixed app: `python challenge2/app.py`
+	- Semgrep reports: `challenge2/semgrep-before.json`, `challenge2/semgrep-after.json`
+
+- Challenge 3 (Docker + Trivy)
+	- Build insecure image (example):
+
+		```powershell
+		docker build -f challenge3/Dockerfile.insecure -t demo:insecure challenge3/
+		trivy image demo:insecure
+		```
+
+	- Build hardened image:
+
+		```powershell
+		docker build -f challenge3/Dockerfile -t demo:hardend challenge3/
+		trivy image demo:hardend
+		```
+
+- Challenge 4 (Terraform + Checkov)
+	- Run Checkov against the insecure config:
+
+		```powershell
+		checkov -d challenge4/ -o json > challenge4/checkov-before.txt
+		```
+
+	- After fixes, re-run and compare: `challenge4/checkov-after.txt`
+
+## Notes
+
+- Scanner binaries (gitleaks, semgrep, trivy, checkov) are not included. Install them via their official docs or package managers.
+- The repository is intended for learning and demonstration purposes only.
+
 
